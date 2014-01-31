@@ -1,4 +1,4 @@
-package org.sakila.models;
+package org.sakila.data.models;
 
 import java.util.Date;
 
