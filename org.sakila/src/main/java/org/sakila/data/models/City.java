@@ -1,11 +1,24 @@
 package org.sakila.data.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class City {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="CITY")
+public class City implements Serializable{
 	
+
+	private static final long serialVersionUID = 6996898163423520810L;
+	
+	@Id
 	private long cityId;
 	private String city;
+	@Column(name="LAST_UPDATE")
 	private Date lastUpdate;
 	private long countryId;
 	

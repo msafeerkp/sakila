@@ -1,8 +1,12 @@
 package org.sakila.data.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Rental {
+public class Rental implements Serializable{
+	
+	private static final long serialVersionUID = 2485845138754475687L;
+	
 	private long rentalId;
 	private Date rentalDate;
 	private Date returnDate;

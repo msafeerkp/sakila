@@ -1,8 +1,11 @@
 package org.sakila.data.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Store {
+public class Store implements Serializable{
+	
+	private static final long serialVersionUID = -3223136346567825555L;
 	
 	private long storeId;
 	private Date lastUpdate;

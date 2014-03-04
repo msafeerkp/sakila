@@ -1,9 +1,12 @@
 package org.sakila.data.models;
 
+import java.io.Serializable;
 import java.sql.Blob;
 import java.util.Date;
 
-public class Staff {
+public class Staff implements Serializable {
+	
+	private static final long serialVersionUID = 7532256885586723570L;
 	
 	private long staffId;
 	private String firstName;

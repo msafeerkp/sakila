@@ -1,8 +1,11 @@
 package org.sakila.data.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Payment {
+public class Payment implements Serializable{
+	
+	private static final long serialVersionUID = -6799379873803793738L;
 	
 	private long paymentId;
 	private double amount;

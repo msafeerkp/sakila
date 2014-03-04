@@ -1,15 +1,31 @@
 package org.sakila.data.models;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Customer {
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="customer")
+public class Customer implements Serializable{
 	
+	private static final long serialVersionUID = -1415484823577614250L;
+	
+	@Id
+	@Column(name="CUSTOMER_ID")
 	private long customerId;
+	@Column(name="FIRST_NAME")
 	private String firstName;
+	@Column(name="LAST_NAME")
 	private String lastName;
 	private String email;
 	private char active;
+	@Column(name="CREATE_DATE")
 	private Date createData;
+	@Column(name="LAST_UPDATE")
 	private Date lastUpdate;
 	private long addressId;
 	private long storeId;
