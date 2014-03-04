@@ -1,5 +1,6 @@
 package org.sakila.data.models;
 
+
 import java.io.Serializable;
 import java.sql.Clob;
 import java.util.Date;
@@ -7,7 +8,7 @@ import java.util.Date;
 public class Film implements Serializable{
 
 	private static final long serialVersionUID = -1711123807913958605L;
-	
+
 	private long filmId;
 	private String title;
 	private Clob description;
