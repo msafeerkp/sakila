@@ -4,6 +4,11 @@ import java.io.Serializable;
 import java.sql.Blob;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "STAFF")
 public class Staff implements Serializable {
 	
 	private static final long serialVersionUID = 7532256885586723570L;

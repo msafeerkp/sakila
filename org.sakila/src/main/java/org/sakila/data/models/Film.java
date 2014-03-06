@@ -5,6 +5,11 @@ import java.io.Serializable;
 import java.sql.Clob;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "FILM")
 public class Film implements Serializable{
 
 	private static final long serialVersionUID = -1711123807913958605L;

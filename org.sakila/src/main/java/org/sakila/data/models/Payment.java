@@ -3,6 +3,11 @@ package org.sakila.data.models;
 import java.io.Serializable;
 import java.util.Date;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "PAYMENT")
 public class Payment implements Serializable{
 	
 	private static final long serialVersionUID = -6799379873803793738L;
