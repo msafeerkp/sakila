@@ -5,6 +5,7 @@ import java.sql.Blob;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -13,6 +14,7 @@ public class Staff implements Serializable {
 	
 	private static final long serialVersionUID = 7532256885586723570L;
 	
+	@Id
 	private long staffId;
 	private String firstName;
 	private String lastName;

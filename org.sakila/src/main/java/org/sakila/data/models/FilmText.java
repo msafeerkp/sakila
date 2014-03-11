@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.sql.Clob;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class FilmText implements Serializable{
 	
 	private static final long serialVersionUID = -2989537217592957129L;
 	
+	@Id
 	private long filmId;
 	private String title;
 	private Clob description;

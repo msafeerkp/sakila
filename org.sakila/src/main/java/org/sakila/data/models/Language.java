@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class Language implements Serializable{
 	
 	private static final long serialVersionUID = -7968966551254483196L;
 	
+	@Id
 	private long languageId;
 	private String name;
 	private Date lastUpdate;

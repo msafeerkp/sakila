@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class Inventory implements Serializable{
 
 	private static final long serialVersionUID = -4805995683635383524L;
 	
+	@Id
 	private long inventoryId;
 	private Date lastUpdate;
 	private long filmId;

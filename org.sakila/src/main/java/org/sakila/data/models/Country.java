@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class Country implements Serializable{
 	
 	private static final long serialVersionUID = 2319320572779812937L;
 	
+	@Id
 	private long countryId;
 	private String country;
 	private Date lastUpdate;

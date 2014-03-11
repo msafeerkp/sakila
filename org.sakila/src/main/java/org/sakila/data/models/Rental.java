@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class Rental implements Serializable{
 	
 	private static final long serialVersionUID = 2485845138754475687L;
 	
+	@Id
 	private long rentalId;
 	private Date rentalDate;
 	private Date returnDate;

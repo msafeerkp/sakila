@@ -46,7 +46,5 @@ public class City implements Serializable{
 	public void setCountryId(long countryId) {
 		this.countryId = countryId;
 	}
-	
-	
 
 }

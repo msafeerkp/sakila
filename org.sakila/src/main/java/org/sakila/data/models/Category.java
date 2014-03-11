@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class Category implements Serializable{
 	
 	private static final long serialVersionUID = -5924715674112641288L;
 	
+	@Id
 	private long categoryId;
 	private String name;
 	private Date lastUpdate;

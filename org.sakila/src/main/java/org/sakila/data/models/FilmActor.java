@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class FilmActor implements Serializable{
 	
 	private static final long serialVersionUID = 334157246584385481L;
 	
+	@Id
 	private long actorId;
 	private Date lastUpdate;
 	private long filmId;

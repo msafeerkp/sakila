@@ -4,6 +4,12 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
 @Entity
@@ -12,7 +18,11 @@ public class Address implements Serializable{
 	
 	private static final long serialVersionUID = 934198946035190138L;
 	
+	@Id
+	@SequenceGenerator(name="ID_GENERATOR", sequenceName="ID_GENERATOR")
+	@GeneratedValue(generator="ID_GENERATOR", strategy=GenerationType.SEQUENCE)
 	private long addressId;
+	
 	private String address;
 	private String address2;
 	private String district;
@@ -20,6 +30,9 @@ public class Address implements Serializable{
 	private String phone;
 	private Date lastUpdate;
 	private long cityId;
+	@ManyToOne
+	@JoinColumn(name="CUSTOMER_ID")
+	private Customer customer;
 	
 	public long getAddressId() {
 		return addressId;
@@ -68,6 +81,12 @@ public class Address implements Serializable{
 	}
 	public void setCityId(long cityId) {
 		this.cityId = cityId;
+	}
+	public Customer getCustomer() {
+		return customer;
+	}
+	public void setCustomer(Customer customer) {
+		this.customer = customer;
 	}
 
 }

@@ -4,6 +4,7 @@ import java.io.Serializable;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
@@ -12,6 +13,7 @@ public class Payment implements Serializable{
 	
 	private static final long serialVersionUID = -6799379873803793738L;
 	
+	@Id
 	private long paymentId;
 	private double amount;
 	private Date paymentDate;
